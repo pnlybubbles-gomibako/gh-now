@@ -1,0 +1,23 @@
+machine:
+  timezone: UTC
+  node:
+    version: 8.4.0
+  post:
+    - npm install -g now
+  environment:
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+    GIT_REPO: "git@github.com:pnlybubbles-gomibako/gh-now.git"
+    GIT_NAME: "CircleCI"
+    GIT_EMAIL: "pnlybubbles+circleci@gmail.com"
+    INSTANCE_NAME: "gh-now"
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - sh -x ./ci.sh
+
+general:
+  branches:
+    only:
+      - master

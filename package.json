@@ -1,0 +1,29 @@
+{
+  "license": "MIT",
+  "name": "gh-now",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "browserify client/index.js -t [ envify --NOW_BASE '' ] > public/index.js",
+    "build:gh": "browserify client/index.js -t [ envify --NOW_BASE $NOW_BASE ] > public/index.js",
+    "watch": "npm run watch:server & npm run watch:client",
+    "watch:server": "nodemon server/index.js",
+    "watch:client": "budo client/index.js -lP -- -t [ envify --NOW_BASE 'http://localhost:3000' ]"
+  },
+  "dependencies": {
+    "choo": "^6.0.1",
+    "choo-log": "^7.2.1",
+    "kcors": "^2.2.1",
+    "koa": "^2.3.0",
+    "koa-logger": "^3.0.1",
+    "koa-route": "^3.2.0",
+    "koa-static": "^4.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "budo": "^10.0.4",
+    "envify": "^4.1.0",
+    "nodemon": "^1.12.1",
+    "now": "^8.3.2"
+  }
+}
