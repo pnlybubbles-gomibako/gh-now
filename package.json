@@ -9,7 +9,8 @@
     "watch": "npm run watch:server & npm run watch:client",
     "watch:server": "nodemon server/index.js",
     "watch:client": "budo client/index.js -lP -- -t [ envify --NOW_BASE 'http://localhost:3000' ]",
-    "clean": "del public/* !public/index.html"
+    "clean": "del public/* !public/index.html",
+    "test": "echo 'no test :('"
   },
   "dependencies": {
     "choo": "^6.0.1",
