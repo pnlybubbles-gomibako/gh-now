@@ -7,7 +7,7 @@ const BASE = process.env.NOW_BASE || location.origin
 const app = choo()
 app.use(log())
 app.use(store)
-app.route('/', main)
+app.route('*', main)
 app.mount('body')
 
 function main (state, emit) {
