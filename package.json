@@ -8,7 +8,8 @@
     "build:gh": "browserify client/index.js -t [ envify --NOW_BASE $NOW_BASE ] > public/index.js",
     "watch": "npm run watch:server & npm run watch:client",
     "watch:server": "nodemon server/index.js",
-    "watch:client": "budo client/index.js -lP -- -t [ envify --NOW_BASE 'http://localhost:3000' ]"
+    "watch:client": "budo client/index.js -lP -- -t [ envify --NOW_BASE 'http://localhost:3000' ]",
+    "clean": "rm public/index.js"
   },
   "dependencies": {
     "choo": "^6.0.1",
