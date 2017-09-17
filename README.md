@@ -11,8 +11,8 @@ Simple static webpage with api server
 npm run watch
 ```
 
-Static server : `[localhost:9966](localhost:9966)`
-Api server    : `[localhost:3000](localhost:3000)`
+Static server : `localhost:9966`
+Api server    : `localhost:3000`
 
 Base url of api server address will be revealed in `process.env.NOW_BASE`.
 
