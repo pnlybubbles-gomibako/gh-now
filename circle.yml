@@ -10,6 +10,7 @@ machine:
     GIT_NAME: "CircleCI"
     GIT_EMAIL: "pnlybubbles+circleci@gmail.com"
     INSTANCE_NAME: "gh-now"
+    CNAME: ""
 
 deployment:
   production:
